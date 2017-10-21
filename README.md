@@ -78,7 +78,7 @@ optional arguments:
 # route53-presence.py
 
 We run this script from inside a container in a startup script.  It sets a DNS lookup to itself, utilizing the EC2 meta-info to figure out it's own ip address.  This is a cheap and easy way to do service discovery, there are better ways since changing the host that
-the service runs on could result in downtime equal to your TTL.
+the service runs on could result in downtime equal to your TTL. (currently, we use this for a cheap development/qa redis server)
 
 ```
 usage: route53-presence.py [-h] [--ttl TTL] [--local] hostname
